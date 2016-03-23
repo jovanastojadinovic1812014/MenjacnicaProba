@@ -1,0 +1,12 @@
+package menjacnica.interfejs;
+
+import java.util.GregorianCalendar;
+
+import menjacnica.Kurs;
+
+public interface MenjacnicaInterfejs {
+	public void dodajKurs(String nazivValute, Kurs kurs);
+	public void obrisiKurs(String nazivValute, Kurs kurs);
+	public Kurs vratiKurs(String nazivValute, GregorianCalendar datum);
+	
+}
