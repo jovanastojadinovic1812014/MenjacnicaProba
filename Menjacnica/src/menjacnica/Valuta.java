@@ -5,9 +5,8 @@ import java.util.LinkedList;
 public class Valuta {
 	private String nazivValute;
 	private String skraceniNazivValute;
-	
+
 	private LinkedList<Kurs> kursevi = new LinkedList<Kurs>();
-	
 
 	public LinkedList<Kurs> getKursevi() {
 		return kursevi;
@@ -22,6 +21,9 @@ public class Valuta {
 	}
 
 	public void setNazivValute(String nazivValute) {
+		if (nazivValute == null || nazivValute.isEmpty()) {
+			throw new RuntimeException("Greska pri unosu naziva valute!");
+		}
 		this.nazivValute = nazivValute;
 	}
 
@@ -30,6 +32,9 @@ public class Valuta {
 	}
 
 	public void setSkraceniNazivValute(String skraceniNazivValute) {
+		if (skraceniNazivValute == null || skraceniNazivValute.isEmpty()) {
+			throw new RuntimeException("Greska pri unosu skracenog naziva valute!");
+		}
 		this.skraceniNazivValute = skraceniNazivValute;
 	}
 
@@ -75,6 +80,5 @@ public class Valuta {
 			return false;
 		return true;
 	}
-	
-	
+
 }
